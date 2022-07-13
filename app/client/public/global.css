@@ -1,0 +1,176 @@
+:root {
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #333;
+	
+	--clamped-width: clamp(350px, 100%, 500px);
+
+	--primary-dark: #32292F;
+	--primary-blue: #77adbb;
+	--primary-white: #fff;
+	--secondary-white: #fef;
+	--secondary-green: #4AAD52;
+	--secondary-white: #c4c4c4;
+	--secondary-orange: #f58a07;
+	--secondary-yellow: #f1d102d3;
+	--secondary-red: #fb3640;
+}
+
+@media only screen and (max-width: 600px) {
+	:root {
+		--clamped-width: 95vw;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+main {
+	box-sizing: border-box;
+	min-height: 100%;
+	height: fit-content;
+	width: calc(100% - 6rem);
+	margin-left: 6rem;
+	margin-bottom: 6rem;
+	padding: 1rem 0.5rem;
+}
+
+main::after {
+	height: 0;
+	width: 0;
+}
+
+a {
+	font-family: inherit;
+	color: #000;
+	font-size: inherit;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:visited {
+	color: var(--secondary--orange);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 0.4rem;
+	margin: 0.25rem 0;
+	border: none;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	height: fit-content;
+	width: fit-content;
+	color: #333;
+	font-weight: 500;
+	background-color: var(--primary-blue);
+	border-radius: 10px;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button:active {
+	background-color: var(--secondary-yellow) !important;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	background-color: var(--secondary-orange);
+}
+
+button:hover {
+	background-color: var(--secondary-orange);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	background-color: inherit;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.75rem;
+}
+
+h5 {
+	font-size: 1.5rem;
+}
+
+h6 {
+	font-size: 1.25rem;
+}
+
+.error {
+	background-color: var(--secondary-red);
+}
+
+.general-container {
+	width: var(--clamped-width);
+	padding: 0.5rem;
+	border-radius: 10px;
+	box-shadow: 2px 2px 7px 3px #777;
+}
+
+@media only screen and (max-width: 600px) {
+	main {
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 10rem;
+	}
+	
+	main::after {
+        content: '';
+        width: 100%;
+        height: 7.5rem;
+    }
+}
